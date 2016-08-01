@@ -40,26 +40,34 @@ Use the following order for nesting selectors:
 * Modifiers (`&--small`)
 * Concatenated Selectors (`&.is-active`)
 * Nested Elements (`&__body`)
-* Nested Selectors (`.baz`)
+* Nested Selectors
 
 Example:
 ```css
 .card {
+  /* CSS Variables */
   --color: #fff;
+  
+  /* Applies and Mixins */
   @apply --example;
   @mixin --something;
+  
+  /* Declaration List */
   display: block;
   ...
   z-index: 1;
 
+  /* Media Queries */
   @media screen and (min-width: 900px) {
     ...
   }
 
+  /* Pseudo States */
   &:hover {
     ...
   }
 
+  /* Pseudo Elements */
   &::before,
   &::after {
     ...
@@ -69,18 +77,22 @@ Example:
     ...
   }
 
+  /* Modifiers */
   &--small {
     ...
   }
 
+  /* Concatenated Selectors */
   &.is-active {
 
   }
 
+  /* Nested Elements */
   &__body {
     ...
   }
-
+  
+  /* Nested Selectors */
   .label {
     ...
   }
