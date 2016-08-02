@@ -1,8 +1,6 @@
-
 # CSS Guidelines
 
 ## Folder and File Structure
-
 A variation of the [7-1 Pattern](http://sass-guidelin.es/#the-7-1-pattern) by Hugo Giraudel.
 
 ```
@@ -15,8 +13,17 @@ css/
 | -- 4_layout/
 ```
 
-## Naming Convention
+## Namespacing
 
+| Type             | Prefix          | Example                       |
+| ---------------- | --------------- | ----------------------------- |
+| Components       | `c-`            | `c-button`<br>`c-card`        |
+| Layout Modules   | `l-`            | `l-container`<br>`l-grid`     |
+| Helpers          | `h-`            | `h-clearfix`                  |
+| States           | `is-`<br>`has-` | `is-active`<br>`has-loaded`   |
+| JavaScript Hooks | `js-`           | `js-accordion`                |
+
+## Naming Convention
 Use [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) naming convention:
 
 ```css
@@ -27,7 +34,6 @@ Use [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem
 ```
 
 ## Nesting Order
-
 Use the following order for nesting selectors:
 
 ```css
@@ -88,5 +94,4 @@ Use the following order for nesting selectors:
 ```
 
 ## Linting
-
 * Stylelint: http://stylelint.io/
