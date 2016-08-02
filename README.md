@@ -29,23 +29,11 @@ Use [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem
 ## Nesting Order
 
 Use the following order for nesting selectors:
-* CSS Variables (`--color`)
-  * Note: Not fully supported as of 8/1/2016 http://caniuse.com/#feat=css-variables
-* Apply (`@apply`)
-* Mixins (`@mixins`)
-* Declaration List
-* Media Queries (`@media`)
-* Pseudo States ( `&:hover`)
-* Pseudo Elements (`&::before, &:nth-child`)
-* Modifiers (`&--small`)
-* Concatenated Selectors (`&.is-active`)
-* Nested Elements (`&__body`)
-* Nested Selectors
 
-Example:
 ```css
 .card {
   /* CSS Variables */
+  /* Note: Not fully supported as of 8/1/2016 http://caniuse.com/#feat=css-variables */
   --color: #fff;
   
   /* Applies and Mixins */
