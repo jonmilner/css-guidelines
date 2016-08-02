@@ -1,18 +1,29 @@
 # CSS Guidelines
 
+- [Principles](#principles)
+- [Tools](#tools)
+- [Architecture](#architecture)
+- [Naming Conventions](#naming-conventions)
+- [Linting](#linting)
+- [Credits/Inspiration](#credits--inspiration)
+
 ## Principles
+
 * Consistency
 * Maintainability
 * Readability
 * Scalability
 
 ## Tools
-PostCSS
+
+PostCSS details coming soon
 
 ## Architecture
 
 ### Folder Structure
+
 We prefix our directories with the number associated with the order in which it's imported in my main styles.css file.
+
 ```
 css/
 |
@@ -24,7 +35,9 @@ css/
 ```
 
 ### File Names
+
 The main file, `styles.css`, looks something like this:
+
 ```css
 /* ==========================================================================
  * Styles
@@ -49,7 +62,10 @@ The main file, `styles.css`, looks something like this:
 @import 5_helpers/...";
 ```
 
-## Namespacing
+## Naming Conventions
+
+### Namespacing
+
 We use the following namespacing:
 
 | Type             | Prefix          | Example                       |
@@ -60,7 +76,8 @@ We use the following namespacing:
 | States           | `is-`<br>`has-` | `is-active`<br>`has-loaded`   |
 | JavaScript Hooks | `js-`           | `js-accordion`                |
 
-## Naming Convention
+### BEM
+
 We use the [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) naming convention:
 
 ```css
@@ -70,32 +87,46 @@ We use the [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-ro
 .block__element--modifier { ... }
 ```
 
-### BEM Do's and Don'ts
+#### BEM Do's and Don'ts
+
 * Don't use a modifier outside of the context of its owner.
 
-#### 👎 DON'T
+##### 👎 DON'T
+
 ```html
 <button class="c-button--large"></button>
 ```
 
-#### 👍 DO
+##### 👍 DO
+
 ```html
 <button class="c-button c-button--large"></button>
 ```
 
-### BEM Things to Avoid
-* Avoid combining multiple BEM entities on a single DOM node.
-  ```html
-  <!-- Avoid -->
-  <button class="c-button c-icon">...</button>
+* Don't combine multiple BEM entities on a single DOM node.
 
-  <!-- Instead -->
-  <button class="c-button">
-    <span class="c-icon">...</span>
-  </button>
-  ```
+##### 👎 DON'T
+
+```html
+<button class="c-button c-icon">...</button>
+```
+
+##### 👍 DO
+
+```html
+<button class="c-button">
+  <span class="c-icon">...</span>
+</button>
+```
   
-## Nesting Order
+## Order
+
+### Declaration Order
+
+Coming Soon
+
+### Nesting Order
+
 Use the following order for nesting selectors:
 
 ```css
