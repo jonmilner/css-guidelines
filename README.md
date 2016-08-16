@@ -32,7 +32,32 @@ css/
 | -- 2_base/
 | -- 3_components/
 | -- 4_layout/
+| -- 5_helpers/
 ```
+
+#### Vendor
+
+`0_vendor` includes any third party CSS that can't be imported via npm.
+
+#### Utilities
+
+`1_utilities` is a place to store global variables, mixins, etc. that don't directly compile into CSS.
+
+#### Base
+
+`2_base` is where classless element selectors are given some basic styles.
+
+#### Components
+
+`3_components` includes all of our repeatable patterns, or components. Component classes are prefixed with `c-`.
+
+#### Layout
+
+`4_layout` includes styles for more structural elements like page layouts and grids. Layout classes are prefixed with `l-`.
+
+#### Helpers
+
+`5_helpers` is where "helper" classes are defined. Helper classes are prefixed with `h-` and include an `!important` rule.
 
 ### File Names
 
@@ -44,7 +69,8 @@ The main file, `styles.css`, looks something like this:
  * ========================================================================== */
 
 /* Vendor */
-@import "vendor.css";
+@import "normalize.css";
+@import "0_vendor/...";
 
 /* Utilities */
 @import "1_utilities/...";
@@ -59,7 +85,7 @@ The main file, `styles.css`, looks something like this:
 @import "4_layout/...";
 
 /* Helpers */
-@import 5_helpers/...";
+@import "5_helpers/...";
 ```
 
 ## Naming Conventions
