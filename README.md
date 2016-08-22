@@ -213,7 +213,7 @@ Use the following order for nesting selectors:
 ```
 
 ## Linting
-* Stylelint: http://stylelint.io/
+* Stylelint: https://github.com/jonmilner/stylelint-config
 
 ## Credits / Inspiration
 * [cssguidelin.es](http://cssguidelin.es/)
