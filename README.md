@@ -28,20 +28,21 @@ We prefix our directories with the number associated with the order in which it'
 css/
 |
 | -- 0_vendor/
-| -- 1_utilities/
+| -- 1_settings/
 | -- 2_base/
 | -- 3_components/
 | -- 4_layout/
 | -- 5_helpers/
+| -- 6_overrides/
 ```
 
 #### Vendor
 
 `0_vendor` includes any third party CSS that can't be imported via npm.
 
-#### Utilities
+#### Settings
 
-`1_utilities` is a place to store global variables, mixins, etc. that don't directly compile into CSS.
+`1_settings` is a place to store global variables, mixins, etc. that don't directly compile into CSS.
 
 #### Base
 
@@ -59,6 +60,10 @@ css/
 
 `5_helpers` is where "helper" classes are defined. Helper classes are prefixed with `h-` and include an `!important` rule.
 
+#### Overrides
+
+`6_overrides` - Override vendor styles, write hacky CSS due to framework limitations, etc.
+
 ### File Names
 
 The main file, `styles.css`, looks something like this:
@@ -72,8 +77,8 @@ The main file, `styles.css`, looks something like this:
 @import "normalize.css";
 @import "0_vendor/...";
 
-/* Utilities */
-@import "1_utilities/...";
+/* Settings */
+@import "1_settings/...";
 
 /* Base */
 @import "2_base/...";
@@ -86,6 +91,9 @@ The main file, `styles.css`, looks something like this:
 
 /* Helpers */
 @import "5_helpers/...";
+
+/* Overrides */
+@import "6_shame/...";
 ```
 
 ## Naming Conventions
