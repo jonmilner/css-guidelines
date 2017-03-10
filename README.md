@@ -93,7 +93,7 @@ The main file, `styles.css`, looks something like this:
 @import "5_helpers/...";
 
 /* Overrides */
-@import "6_shame/...";
+@import "6_overrides/...";
 ```
 
 ## Naming Conventions
